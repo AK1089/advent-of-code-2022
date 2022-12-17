@@ -1,0 +1,36 @@
+A Brief List of Python Features I'm Using for Pretty Much the First Time:
+
+Day 5:
+  the list.pop() method! never used the stack data structure before, but it seemed like the best way to handle this data.
+  list.pop() removes the last item from a list, and returns it as a function. so a.append(b.pop()) moves the last item from
+  b to the last slot of a, essentially keeping track of "what's on top."
+
+Day 7:
+  using operator.getitem with functools.reduce to get the item specified by a path of keys through a nested dictionary!
+  functools.reduce(operator.getitem, path, dictionary) if you have dictionary = {"a":{"b":2, "c":3}} and path = ["a", "b"]
+  goes through the dictionary, getting the value defined by the next value in path each time (here, it gets you 2).
+  this is super useful when you're building up nested dictionaries in your code.
+
+  also, match statements! these are great for parsing various lists of instructions in a super readable way without tons of
+  branching if-else statements. you can match on patterns and execute code with the variables defined in your patterns,
+  and it's really useful (I've used them many times more in subsequent puzzles).
+
+Day 8:
+  using for-else clauses! if you have a for loop and then an else clause, the else clause only runs if the loop terminates
+  normally (ie. if the iteration ends, rather than being broken out of.) this is useful when you're testing a list of things,
+  and want to do one thing if you find a value, and handle some other case if you reach the end of the list and find nothing.
+
+Day 9:
+  using complex numbers! these can be constructed as literals with a+bj (eg. 2+3j), or complex(2, 3). this is useful for
+  dealing with offsets in exactly two dimensions, as if a = 2+3j and b = -1+2j, a + b = 1+5j (much easier than using indices)
+  for each part of the value).
+
+Day 10:
+  using generator expressions with next(gen)! these are great when you want to get the next item but not at every cycle of a
+  loop, as in the day 10 example, so you can't iterate directly but have to specify when you want the next value. I used these
+  again in Day 13, to compare lists pairwise and also check when each list ends by catching StopIteration exceptions.
+
+Day 11:
+  using exec(expr) to evaluate actual expressions which have been defined in an input. (I've done this before, but only to
+  experiment, rather than for an actual use-case). when you're given an expression like "new = old * 19", it's more useful to
+  just execute this expression directly than try to parse it with splits and create lambda functions.

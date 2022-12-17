@@ -1,0 +1,8 @@
+if distance is 9:
+exclusion zone 19 along that row (centred at sensor)
+exclusion row 17 along next row etc
+so n rows away, exclusion zone is of size (2d+1) - 2n
+this means it's ((((2d+1) - 2n) - 1) / 2) away on either side
+ie (2d-2n)/2 = d - n (assuming positive)
+
+get all connections, and how long it takes to get there
